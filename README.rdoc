@@ -1,0 +1,3 @@
+
+{<img src="https://coveralls.io/repos/Cynaria/room-eez/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/Cynaria/room-eez]
+
