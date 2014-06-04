@@ -1,0 +1,23 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/KingDusty/Desktop/DBC Challenges/room-eez/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/KingDusty/Desktop/DBC Challenges/room-eez/app/models/bill.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1401921723
+  }
+}
