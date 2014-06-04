@@ -1,6 +1,7 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/Users/KingDusty/Desktop/DBC Challenges/room-eez/app/helpers/application_helper.rb": [
         1,
         null
@@ -14,10 +15,23 @@
         1,
         null,
         null,
+=======
+      "/Users/apprentice/room-eez/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/room-eez/app/models/chore.rb": [
+        1,
+        1,
+>>>>>>> master
         null,
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1401921723
+=======
+    "timestamp": 1401921378
+>>>>>>> master
   }
 }
