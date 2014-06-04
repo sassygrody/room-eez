@@ -1,0 +1,17 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/apprentice/room-eez/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/apprentice/room-eez/app/models/chore.rb": [
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1401921378
+  }
+}
