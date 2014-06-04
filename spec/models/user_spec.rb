@@ -1,12 +1,7 @@
 require "spec_helper"
 
 describe User do
-	let(:user) {User.new(:first_name => "Unicorn",
-        :last_name => "Magic",
-        :email => "hey@yay.com",
-        :phone_number => "123-456-7890",
-        :password_digest => "hithere"
-      )}
+	let(:user) {User.new(:first_name => "Unicorn", :last_name => "Magic", :email => "hey@yay.com", :phone_number => "123-456-7890", :password => "hithere")}
 
   describe '#first_name' do
   	it "Should return the user's first name" do
