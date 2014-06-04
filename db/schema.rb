@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20140604222555) do
 
+  create_table "bills", force: true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.integer  "creator_id"
+    t.float    "cost"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "chore_masters", force: true do |t|
     t.integer  "chore_id"
     t.integer  "user_id"
