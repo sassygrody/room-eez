@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
 		through: :participants,
 		source: :user
 
-	validates_presence_of :name, :when, :created_at
+	validates_presence_of :name, :happen_at
 
 	# has_many :participants, class_name: "User" ?
 end

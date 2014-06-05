@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Event do
 	# hard coded in USER_ID, need to get associations working
-  let(:event) {Event.new(:name => "Graduation", :description => "Real life approaching", :when => "2 weeks!",:creator_id => 1)}
+  let(:event) {Event.new(:name => "Graduation", :description => "Real life approaching", :happen_at => "2 weeks!",:creator_id => 1)}
 
   describe "event" do
 		it 'should be an instance of a Event object' do
@@ -25,9 +25,9 @@ describe Event do
  		end
  	end
 
- 	describe "#when" do 
+ 	describe "#happen_at" do 
  		it "returns the designated event happening time" do
- 			expect(event.when).to eq "2 weeks!"
+ 			expect(event.happen_at).to eq "2 weeks!"
  		end
  	end
 
@@ -41,8 +41,16 @@ describe Event do
  		# user_id is will be validated added through logic
  		# shouldn't HAVE to include description
  		it { event.should validate_presence_of(:name) }
- 		it { event.should validate_presence_of(:when) }
- 		it { event.should validate_presence_of(:created_at)}
+ 		it { event.should validate_presence_of(:happen_at) }
+
+ 
+
+
+
+
+
+
+        
 
  	end
 
