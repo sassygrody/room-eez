@@ -1,6 +1,11 @@
 require 'spec_helper'
 
 describe UserBill do
+
+  it {should have_db_column(:bill_id)}
+  it {should have_db_column(:user_id)}
+  it {should have_db_column(:iou)}
+
   let(:userbill) {UserBill.new(
   	:user_id => 1,
   	:bill_id => 1,
