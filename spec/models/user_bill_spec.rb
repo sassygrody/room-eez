@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe UserBill do
   let(:userbill) {UserBill.new(
-  	:payer_id => 1,
+  	:user_id => 1,
   	:bill_id => 1,
   	:iou => 11.11
   	)}
@@ -11,11 +11,15 @@ describe UserBill do
   	it "Should be an instance of UserBill" do
   		expect(userbill).to be_a UserBill
   	end	
+
+    it { should belong_to(:user) }
+    it { should belong_to(:bill) }
+
   end
 
-  describe "#payer_id" do
-  	it "Should return the userbill payer id" do
-  		expect(userbill.payer_id).to eq 1
+  describe "#user_id" do
+  	it "Should return the userbill user id" do
+  		expect(userbill.user_id).to eq 1
   	end
   end
 

@@ -10,6 +10,10 @@ describe Bill do
 		it 'should be an instance of a Bill object' do
 			expect(bill).to be_a Bill
 		end 
+		it { should belong_to(:creator).class_name("User") }
+		it { should have_many(:user_bills) }
+		it { should have_many(:owing_people).through(:user_bills).source(:user) }
+
 	end 
 
 	describe "#title" do
