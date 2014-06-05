@@ -7,10 +7,12 @@ describe Chore do
 	describe "chore" do
 		it 'should be an instance of a Chore object' do
 			expect(chore).to be_a Chore
-		end 
+		end
+
 		it { should belong_to(:creator).class_name("User") }
-		it { should have_many(:chore_masters) }
-		it { should have_many(:chore_doers).through(:chore_masters).source(:user) }
+		it { should have_many(:chore_participations) }
+		it { should have_many(:chore_doers).through(:chore_participations).source(:user) }
+		it { should have_many(:comments) }
 	end 
 
 	describe "#name" do

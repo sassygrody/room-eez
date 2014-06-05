@@ -16,6 +16,7 @@ describe Bill do
 			expect(bill).to be_a Bill
 		end 
 		it { should belong_to(:creator).class_name("User") }
+
 		it { should have_many(:bill_participations) }
 		it { should have_many(:debtors).through(:bill_participations).source(:user) }
 
