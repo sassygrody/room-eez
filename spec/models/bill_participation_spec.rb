@@ -1,20 +1,20 @@
 require 'spec_helper'
 
-describe UserBill do
+describe BillParticipation do
 
   it {should have_db_column(:bill_id)}
   it {should have_db_column(:user_id)}
   it {should have_db_column(:iou)}
 
-  let(:userbill) {UserBill.new(
+  let(:userbill) {BillParticipation.new(
   	:user_id => 1,
   	:bill_id => 1,
   	:iou => 11.11
   	)}
 
   describe "userbill" do
-  	it "Should be an instance of UserBill" do
-  		expect(userbill).to be_a UserBill
+  	it "Should be an instance of BillParticipation" do
+  		expect(userbill).to be_a BillParticipation
   	end	
 
     it { should belong_to(:user) }
