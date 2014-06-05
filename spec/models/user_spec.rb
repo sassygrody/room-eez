@@ -1,5 +1,6 @@
 require "spec_helper"
 
+
 describe User do
 
   it {should have_db_column(:first_name)}
@@ -24,6 +25,9 @@ describe User do
     it { should have_many(:user_bills) }
     it { should have_many(:bills).through(:user_bills).with_foreign_key(:owing_people_id) }
   end 
+
+
+  
   describe '#first_name' do
   	it "Should return the user's first name" do
 	  	expect(user.first_name).to eq "Unicorn"

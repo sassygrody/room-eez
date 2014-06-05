@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 		class_name: "Event",
 		foreign_key: :creator_id
 
-	has_many :participants
+	has_many :participants 
 
 	has_many :events, 
 		through: :participants,
