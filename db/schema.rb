@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605003039) do
+
+ActiveRecord::Schema.define(version: 20140605002635) do
+
 
   create_table "bills", force: true do |t|
     t.string   "title"
@@ -38,10 +40,25 @@ ActiveRecord::Schema.define(version: 20140605003039) do
     t.datetime "updated_at"
   end
 
+
   create_table "user_bills", force: true do |t|
     t.integer  "payer_id"
     t.integer  "bill_id"
     t.float    "iou"
+  end
+  
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "when"
+    t.integer  "creator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "participants", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
