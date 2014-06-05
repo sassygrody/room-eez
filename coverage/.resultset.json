@@ -3,6 +3,16 @@
     "coverage": {
       "/Users/apprentice/room-eez/app/helpers/application_helper.rb": [
         1,
+<<<<<<< HEAD
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/KingDusty/Desktop/DBC Challenges/room-eez/app/models/bill.rb": [
+=======
         null
       ],
       "/Users/apprentice/room-eez/app/models/participant.rb": [
@@ -13,17 +23,17 @@
       ],
       "/Users/apprentice/room-eez/app/models/user.rb": [
         1,
+>>>>>>> 1d446f9e92b9b75c9fedbe21f4769257fc7be087
         1,
         null,
         1,
-        1,
-        1,
-        1,
-        1,
         null,
         null,
+<<<<<<< HEAD
+=======
         1,
         0,
+>>>>>>> 1d446f9e92b9b75c9fedbe21f4769257fc7be087
         null,
         null
       ],
@@ -33,6 +43,10 @@
         null
       ]
     },
+<<<<<<< HEAD
+    "timestamp": 1401929218
+=======
     "timestamp": 1401928402
+>>>>>>> 1d446f9e92b9b75c9fedbe21f4769257fc7be087
   }
 }
