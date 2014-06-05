@@ -15,4 +15,7 @@
 /log/*.log
 /tmp
 
-/coverage/.resultset.json
+# Ignore the json files because annoying. 
+/coverage
+
+
