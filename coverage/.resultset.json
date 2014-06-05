@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/helpers/application_helper.rb": [
+      "/Users/agrodzins2/room-eez/app/helpers/application_helper.rb": [
         1,
         null,
         null,
@@ -10,60 +10,30 @@
         null,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/helpers/sessions_helper.rb": [
+      "/Users/agrodzins2/room-eez/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/helpers/user_helper.rb": [
+      "/Users/agrodzins2/room-eez/app/helpers/user_helper.rb": [
         1,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/helpers/welcome_helper.rb": [
+      "/Users/agrodzins2/room-eez/app/helpers/welcome_helper.rb": [
         1,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/controllers/sessions_controller.rb": [
+      "/Users/agrodzins2/room-eez/app/controllers/sessions_controller.rb": [
         1,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/controllers/application_controller.rb": [
+      "/Users/agrodzins2/room-eez/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/controllers/user_controller.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/controllers/welcome_controller.rb": [
-        1,
-        null
-      ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/models/bill_participation.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/models/bill.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
+      "/Users/agrodzins2/room-eez/app/controllers/user_controller.rb": [
         1,
         null,
         1,
@@ -72,13 +42,43 @@
         null,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/models/chore_participation.rb": [
+      "/Users/agrodzins2/room-eez/app/controllers/welcome_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/agrodzins2/room-eez/app/models/bill_participation.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/models/chore.rb": [
+      "/Users/agrodzins2/room-eez/app/models/bill.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/agrodzins2/room-eez/app/models/chore_participation.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/agrodzins2/room-eez/app/models/chore.rb": [
         1,
         null,
         1,
@@ -95,20 +95,20 @@
         null,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/models/comment.rb": [
+      "/Users/agrodzins2/room-eez/app/models/comment.rb": [
         1,
         1,
         null,
         1,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/models/event_participation.rb": [
+      "/Users/agrodzins2/room-eez/app/models/event_participation.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/models/event.rb": [
+      "/Users/agrodzins2/room-eez/app/models/event.rb": [
         1,
         null,
         1,
@@ -127,7 +127,7 @@
         null,
         null
       ],
-      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/models/user.rb": [
+      "/Users/agrodzins2/room-eez/app/models/user.rb": [
         1,
         null,
         1,
@@ -179,6 +179,7 @@
         null
       ]
     },
-    "timestamp": 1402001037
+
+    "timestamp": 1402001246
   }
 }

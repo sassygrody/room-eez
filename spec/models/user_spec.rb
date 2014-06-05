@@ -20,6 +20,7 @@ describe User do
     it { should have_many(:created_events).class_name("Event").with_foreign_key(:creator_id) }
     it { should have_many(:event_participations) }
     it { should have_many(:events).through(:event_participations).with_foreign_key(:antendee_id) }
+    it 
   end 
   describe '#first_name' do
   	it "Should return the user's first name" do
