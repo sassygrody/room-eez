@@ -9,7 +9,7 @@ class Bill < ActiveRecord::Base
 		through: :user_bills,
 		source: :user
 
-
+	has_many :comments, as: :commentable
 
 	validates_presence_of :title, :description, :creator_id, :cost
 	

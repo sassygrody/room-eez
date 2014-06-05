@@ -9,6 +9,8 @@ class Event < ActiveRecord::Base
 		through: :participants,
 		source: :user
 
+	has_many :comments, as: :commentable
+
 	validates_presence_of :name, :happen_at
 
 	# has_many :participants, class_name: "User" ?

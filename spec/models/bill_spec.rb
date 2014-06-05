@@ -18,7 +18,7 @@ describe Bill do
 		it { should belong_to(:creator).class_name("User") }
 		it { should have_many(:user_bills) }
 		it { should have_many(:owing_people).through(:user_bills).source(:user) }
-
+		it { should have_many(:comments)}
 	end 
 
 	describe "#title" do
