@@ -11,5 +11,4 @@ class Event < ActiveRecord::Base
 
 	validates_presence_of :name, :happen_at
 
-	# has_many :participants, class_name: "User" ?
 end

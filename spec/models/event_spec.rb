@@ -18,8 +18,8 @@ describe Event do
 			expect(event).to be_a Event
 		end 
 		it { should belong_to(:creator).class_name("User") }
-		it { should have_many(:participants) }
-		it { should have_many(:participating_people).through(:participants).source(:user) }
+		it { should have_many(:event_participations) }
+		it { should have_many(:attendees).through(:event_participations).source(:user) }
 	end 
 
  	describe "#name" do
