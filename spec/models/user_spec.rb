@@ -1,5 +1,6 @@
 require "spec_helper"
 
+
 describe User do
 
   it {should have_db_column(:first_name)}
@@ -21,6 +22,9 @@ describe User do
     it { should have_many(:participants) }
     it { should have_many(:events).through(:participants).with_foreign_key(:participating_people_id) }
   end 
+
+
+  
   describe '#first_name' do
   	it "Should return the user's first name" do
 	  	expect(user.first_name).to eq "Unicorn"
