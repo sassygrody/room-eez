@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20140605153928) do
 
+  create_table "bill_participations", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "bill_id"
+    t.float    "iou"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "bills", force: true do |t|
     t.string   "title"
     t.string   "description"
@@ -22,7 +30,7 @@ ActiveRecord::Schema.define(version: 20140605153928) do
     t.datetime "updated_at"
   end
 
-  create_table "chore_masters", force: true do |t|
+  create_table "chore_participations", force: true do |t|
     t.integer  "chore_id"
     t.integer  "user_id"
     t.datetime "created_at"
@@ -47,26 +55,18 @@ ActiveRecord::Schema.define(version: 20140605153928) do
     t.datetime "updated_at"
   end
 
-  create_table "events", force: true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "happen_at"
-    t.integer  "creator_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "participants", force: true do |t|
+  create_table "event_participations", force: true do |t|
     t.integer  "user_id"
     t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "user_bills", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "bill_id"
-    t.float    "iou"
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "happen_at"
+    t.integer  "creator_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
