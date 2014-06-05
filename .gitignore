@@ -16,4 +16,4 @@
 /tmp
 
 # Ignore the json files because annoying. 
-/coverage/.resultset.json
+/coverage
