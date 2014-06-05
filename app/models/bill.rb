@@ -3,10 +3,10 @@ class Bill < ActiveRecord::Base
 	belongs_to :creator,
 		class_name: "User"
 
-	has_many :user_bills
+	has_many :bill_participations
 
-	has_many :owing_people,
-		through: :user_bills,
+	has_many :debtors,
+		through: :bill_participations,
 		source: :user
 
 

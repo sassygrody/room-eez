@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 require 'faker'
 
 def rand_date
@@ -22,7 +22,7 @@ end
 		cost: rand()
 	)
 
-	user_bill = UserBill.create!(
+	bill_participation = BillParticipation.create!(
 		user_id: User.all.sample.id,
 		bill_id: bill.id,
 		iou: rand()
@@ -35,7 +35,7 @@ end
 		creator_id: user.id
 	)
 
-	chore_master = ChoreMaster.create!(
+	chore_participation = ChoreParticipation.create!(
 		chore_id: chore.id,
 		user_id: User.all.sample.id
 	)
@@ -49,7 +49,7 @@ end
 
 	participants = User.all.sample(rand(1..User.all.length))
 	participants.each do |participant|
-		Participant.create!(
+		EventParticipation.create!(
 			user_id: participant.id,
 			event_id: event.id
 		)

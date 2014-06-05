@@ -4,32 +4,32 @@ class User < ActiveRecord::Base
 		class_name: "Chore",
 		foreign_key: :creator_id
 
-	has_many :chore_masters
+	has_many :chore_participations
 
 	has_many :chores, 
-		through: :chore_masters,
+		through: :chore_participations,
 		foreign_key: :chore_doers_id
 
 	has_many :created_events,
 		class_name: "Event",
 		foreign_key: :creator_id
 
-	has_many :participants
+	has_many :event_participations
 
 	has_many :events, 
-		through: :participants,
-		foreign_key: :participating_people_id
+		through: :event_participations,
+		foreign_key: :attendee_id
 
 
 	has_many :created_bills,
 		class_name: "Bill",
 		foreign_key: :creator_id
 
-	has_many :user_bills
+	has_many :bill_participations
 
 	has_many :bills, 
-		through: :user_bill,
-		foreign_key: :owing_people_id
+		through: :bill_participations,
+		foreign_key: :debtor_id
 
   has_secure_password
 
