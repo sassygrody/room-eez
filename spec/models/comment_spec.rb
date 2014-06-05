@@ -11,9 +11,6 @@ describe Comment do
 	end
 
 	context "should have associations belonging to" do
-		it{ should belong_to(:event) }
-		it{ should belong_to(:chore) }
-		it{ should belong_to(:bills) }
 		it{ should belong_to(:author) }
 	end
 end
