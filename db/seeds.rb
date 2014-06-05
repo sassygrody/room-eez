@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'faker'
 
 def rand_date
@@ -56,3 +57,4 @@ end
 
 
 end
+

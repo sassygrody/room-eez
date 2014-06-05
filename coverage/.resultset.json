@@ -1,7 +1,9 @@
 {
   "RSpec": {
     "coverage": {
+
       "/Users/Home/room-eez/app/helpers/application_helper.rb": [
+
         1,
         null,
         null,
@@ -10,7 +12,10 @@
         null,
         null
       ],
+
+
       "/Users/Home/room-eez/app/models/bill.rb": [
+
         1,
         null,
         1,
@@ -30,13 +35,21 @@
         null,
         null
       ],
+
       "/Users/Home/room-eez/app/models/chore_master.rb": [
+
+
         1,
         1,
         1,
         null
       ],
+
+
+
       "/Users/Home/room-eez/app/models/chore.rb": [
+
+
         1,
         null,
         1,
@@ -52,7 +65,19 @@
         null,
         null
       ],
+
+      "/Users/elizabethcruz/Desktop/DBC/phase-3/room-eez/app/models/comment.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+
+
       "/Users/Home/room-eez/app/models/event.rb": [
+
+
         1,
         null,
         1,
@@ -69,42 +94,52 @@
         null,
         null
       ],
+
+
+
       "/Users/Home/room-eez/app/models/participant.rb": [
+
         1,
         1,
         1,
         null
       ],
-      "/Users/Home/room-eez/app/models/user_bill.rb": [
+      "/Users/agrodzins2/room-eez/app/models/user_bill.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/Home/room-eez/app/models/user.rb": [
+      "/Users/agrodzins2/room-eez/app/models/user.rb": [
         1,
         null,
-        1,
-        null,
-        null,
-        1,
         1,
         null,
         null,
         null,
         1,
         null,
-        null,
         1,
-        1,
-        null,
         null,
         null,
         null,
         1,
         null,
         null,
+        null,
         1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
         1,
         null,
         null,
@@ -124,6 +159,10 @@
         null
       ]
     },
+
+
     "timestamp": 1401982726
+
+
   }
 }

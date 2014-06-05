@@ -2,7 +2,16 @@ require 'spec_helper'
 
 describe Event do
 	# hard coded in USER_ID, need to get associations working
+
   let(:event) {Event.new(:name => "Graduation", :description => "Real life approaching", :happen_at => "2 weeks!",:creator_id => 1)}
+
+  
+  it {should have_db_column(:name)}
+  it {should have_db_column(:description)}
+  it {should have_db_column(:happen_at)}
+  it {should have_db_column(:creator_id)}
+
+
 
   describe "event" do
 		it 'should be an instance of a Event object' do
@@ -18,7 +27,7 @@ describe Event do
  	  	expect(event.name).to eq "Graduation"
  	  end
  	end
-
+    
  	describe "#description" do 
  		it "returns the description of the event" do 
  			expect(event.description).to eq "Real life approaching"
