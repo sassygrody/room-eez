@@ -12,7 +12,6 @@ describe Event do
   it {should have_db_column(:creator_id)}
 
 
-
   describe "event" do
 		it 'should be an instance of a Event object' do
 			expect(event).to be_a Event
@@ -20,6 +19,7 @@ describe Event do
 		it { should belong_to(:creator).class_name("User") }
 		it { should have_many(:participants) }
 		it { should have_many(:participating_people).through(:participants).source(:user) }
+		it { should have_many(:comments) }
 	end 
 
  	describe "#name" do
