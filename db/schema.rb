@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20140605153928) do
   create_table "events", force: true do |t|
     t.string   "name"
     t.string   "description"
-    t.string   "when"
+    t.string   "happen_at"
     t.integer  "creator_id"
     t.datetime "created_at"
     t.datetime "updated_at"

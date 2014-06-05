@@ -31,6 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'coveralls', require: false
 
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -45,4 +46,5 @@ group :development, :test do
 	gem 'capybara', '~> 2.2.1'
 	gem 'database_cleaner', '~>1.2.0'
   gem 'shoulda-matchers', require: false
+  gem 'faker'
 end
