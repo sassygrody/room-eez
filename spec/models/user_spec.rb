@@ -1,6 +1,13 @@
 require "spec_helper"
 
 describe User do
+
+  it {should have_db_column(:first_name)}
+  it {should have_db_column(:last_name)}
+  it {should have_db_column(:email)}
+  it {should have_db_column(:phone_number)}
+  it {should have_db_column(:password_digest)}
+
 	let(:user) {User.new(:first_name => "Unicorn", :last_name => "Magic", :email => "hey@yay.com", :phone_number => "123-456-7890", :password => "hithere")}
 
   describe "user" do

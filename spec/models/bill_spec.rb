@@ -1,6 +1,11 @@
 require 'spec_helper'
 
 describe Bill do
+
+	it {should have_db_column(:title)}
+	it {should have_db_column(:description)}
+	it {should have_db_column(:creator_id)}
+	
 	let(:bill) {Bill.new(:title => 'Utilities',
 											 :description => 'For June',
 											 :creator_id => 1,
