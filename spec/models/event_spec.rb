@@ -27,4 +27,15 @@ describe Event do
  			expect(event.creator_id).to eq 1
  		end
  	end
+
+ 	context "validates presence of" do
+ 		# user_id is will be validated added through logic
+ 		# shouldn't HAVE to include description
+ 		it { event.should validate_presence_of(:name) }
+ 		it { event.should validate_presence_of(:when) }
+ 		it { event.should validate_presence_of(:created_at)}
+
+ 	end
+
+
 end
