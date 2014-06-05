@@ -15,11 +15,11 @@ describe User do
       expect(user).to be_a User
     end
     it { should have_many(:created_chores).class_name("Chore").with_foreign_key(:creator_id) }
-    it { should have_many(:chore_masters) } 
-    it { should have_many(:chores).through(:chore_masters).with_foreign_key(:chore_doers_id) }
+    it { should have_many(:chore_participations) } 
+    it { should have_many(:chores).through(:chore_participations).with_foreign_key(:chore_doers_id) }
     it { should have_many(:created_events).class_name("Event").with_foreign_key(:creator_id) }
-    it { should have_many(:participants) }
-    it { should have_many(:events).through(:participants).with_foreign_key(:participating_people_id) }
+    it { should have_many(:event_participations) }
+    it { should have_many(:events).through(:event_participations).with_foreign_key(:antendee_id) }
   end 
   describe '#first_name' do
   	it "Should return the user's first name" do

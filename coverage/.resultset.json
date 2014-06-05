@@ -1,6 +1,7 @@
 {
   "RSpec": {
     "coverage": {
+
       "/Users/Home/room-eez/app/helpers/application_helper.rb": [
         1,
         null,
@@ -10,7 +11,9 @@
         null,
         null
       ],
+
       "/Users/Home/room-eez/app/helpers/sessions_helper.rb": [
+
         1,
         null
       ],
@@ -42,6 +45,7 @@
         null,
         null
       ],
+
       "/Users/Home/room-eez/app/controllers/welcome_controller.rb": [
         1,
         null
@@ -52,7 +56,9 @@
         1,
         null
       ],
+
       "/Users/Home/room-eez/app/models/bill.rb": [
+
         1,
         null,
         1,
@@ -72,13 +78,17 @@
         null,
         null
       ],
+
       "/Users/Home/room-eez/app/models/chore_participation.rb": [
+
         1,
         1,
         1,
         null
       ],
+
       "/Users/Home/room-eez/app/models/chore.rb": [
+
         1,
         null,
         1,
@@ -101,7 +111,9 @@
         1,
         null
       ],
+
       "/Users/Home/room-eez/app/models/event_participation.rb": [
+
         1,
         1,
         1,
@@ -173,6 +185,8 @@
         null
       ]
     },
+
     "timestamp": 1401998681
+
   }
 }

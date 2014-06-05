@@ -14,7 +14,9 @@ class User < ActiveRecord::Base
 		class_name: "Event",
 		foreign_key: :creator_id
 
+
 	has_many :event_participations
+
 
 	has_many :events, 
 		through: :event_participations,
@@ -30,6 +32,7 @@ class User < ActiveRecord::Base
 	has_many :bills, 
 		through: :bill_participations,
 		foreign_key: :debtor_id
+
 
   has_secure_password
 
