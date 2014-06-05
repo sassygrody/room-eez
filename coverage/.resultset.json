@@ -1,7 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/agrodzins2/room-eez/app/helpers/application_helper.rb": [
+
+      "/Users/Home/room-eez/app/helpers/application_helper.rb": [
+
         1,
         null,
         null,
@@ -10,7 +12,9 @@
         null,
         null
       ],
-      "/Users/agrodzins2/room-eez/app/models/bill.rb": [
+
+      "/Users/Home/room-eez/app/models/bill.rb": [
+
         1,
         null,
         1,
@@ -30,13 +34,16 @@
         null,
         null
       ],
-      "/Users/agrodzins2/room-eez/app/models/chore_master.rb": [
+
+      "/Users/Home/room-eez/app/models/chore_master.rb": [
+
         1,
         1,
         1,
         null
       ],
-      "/Users/agrodzins2/room-eez/app/models/chore.rb": [
+
+      "/Users/Home/room-eez/app/models/chore.rb": [
         1,
         null,
         1,
@@ -52,7 +59,9 @@
         null,
         null
       ],
-      "/Users/agrodzins2/room-eez/app/models/event.rb": [
+
+      "/Users/Home/room-eez/app/models/event.rb": [
+
         1,
         null,
         1,
@@ -69,19 +78,24 @@
         null,
         null
       ],
-      "/Users/agrodzins2/room-eez/app/models/participant.rb": [
+
+      "/Users/Home/room-eez/app/models/participant.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/agrodzins2/room-eez/app/models/user_bill.rb": [
+
+      "/Users/Home/room-eez/app/models/user_bill.rb": [
+
         1,
         1,
         1,
         null
       ],
-      "/Users/agrodzins2/room-eez/app/models/user.rb": [
+      
+      "/Users/Home/room-eez/app/models/user.rb": [
+
         1,
         null,
         1,
@@ -124,6 +138,7 @@
         null
       ]
     },
-    "timestamp": 1401982890
+
+    "timestamp": 1401982726
   }
 }
