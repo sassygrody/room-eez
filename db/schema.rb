@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140604222555) do
+ActiveRecord::Schema.define(version: 20140605003039) do
 
   create_table "bills", force: true do |t|
     t.string   "title"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 20140604222555) do
     t.string   "description"
     t.date     "happen_at"
     t.integer  "creator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_bills", force: true do |t|
+    t.integer  "payer_id"
+    t.integer  "bill_id"
+    t.float    "iou"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -34,16 +34,10 @@ describe Bill do
 		it 'should return the bill cost' do
 			expect(bill.cost).to eq 35
 		end
-	end	 
-
-	describe "#cost_to_float" do
-		it 'should return the cost as a float' do
-			expect(bill.cost_to_float).to eq 35.00
-		end
-		it 'check to see if cost is a float' do
+		it 'Should reuturn the cost as a float' do
 			expect(bill.cost.class).to eq Float
 		end
-	end 
+	end	 
 
 	context "validates presence of" do
 		it {bill.should validate_presence_of(:title)}
