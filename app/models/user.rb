@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
 	has_many :user_bills
 
 	has_many :bills, 
-		through: :user_bill,
+		through: :user_bills,
 		foreign_key: :owing_people_id
 
   has_secure_password

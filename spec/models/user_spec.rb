@@ -21,6 +21,9 @@ describe User do
     it { should have_many(:created_events).class_name("Event").with_foreign_key(:creator_id) }
     it { should have_many(:participants) }
     it { should have_many(:events).through(:participants).with_foreign_key(:participating_people_id) }
+    it { should have_many(:created_bills).class_name("Bill").with_foreign_key(:creator_id) }
+    it { should have_many(:user_bills) }
+    it { should have_many(:bills).through(:user_bills).with_foreign_key(:owing_people_id) }
   end 
 
 
