@@ -16,15 +16,10 @@ describe Bill do
 			expect(bill).to be_a Bill
 		end 
 		it { should belong_to(:creator).class_name("User") }
-<<<<<<< HEAD
-		it { should have_many(:user_bills) }
-		it { should have_many(:owing_people).through(:user_bills).source(:user) }
-		it { should have_many(:comments)}
-=======
+
 		it { should have_many(:bill_participations) }
 		it { should have_many(:debtors).through(:bill_participations).source(:user) }
 
->>>>>>> 36b78cfed668f5f010b12bac8060e1e9307c607a
 	end 
 
 	describe "#title" do
