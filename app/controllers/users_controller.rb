@@ -13,7 +13,10 @@ class UsersController < ApplicationController
 
   def show
     if current_user
-    	
+      @user = User.find(params[:id])
+      @bills = @user.bills	
+      @chores = @user.chores
+      @events = @user.events
     else
       redirect_to root
     end
