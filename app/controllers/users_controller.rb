@@ -1,20 +1,23 @@
 class UsersController < ApplicationController
   include UserHelper
 	def new
+    @errors = params[:errors]
 		@user = User.new
 	end
 
 	def create
     @user = User.new(user_params)
-    @user.save
-    p @user
-    redirect_to user_path(@user.id)
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to user_path(current_user)
+    else
+      @errors = @user.errors.full_messages
+      redirect_to new_user_path(:errors => @errors)
+    end
   end
 
   def show
-    if current_user
-    	
-    else
+    unless current_user
       redirect_to root
     end
   end
