@@ -11,8 +11,8 @@
 	<div class="nav">
 		<h1>Room-eez</h1>
 		<ul>
-			<% if session %>
-				<li><%= link_to "Dashboard", user_path(@user.id) %></li>
+			<% if session[:user_id] %>
+				<li><%= link_to "Dashboard", user_path(session[:user_id]) %></li>
 				<li><a href="">Log Out<a></li>
 			<% else %>
 				<li><a href="/users/new">Sign Up<a></li>
