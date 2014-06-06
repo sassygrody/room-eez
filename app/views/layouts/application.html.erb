@@ -11,13 +11,13 @@
 	<div class="nav">
 		<h1>Room-eez</h1>
 		<ul>
-			<li><a href="/">Home<a></li>
-			<% #if !sessions %>
-			<li><a href="/users/new">Sign Up<a></li>
-			<li><a href="/sessions/new">Sign In<a></li>
-			<% #else %>
-			<li><a href="">Log Out<a></li>
-			<% #end %>
+			<% if session %>
+				<li><%= link_to "Dashboard", user_path(@user.id) %></li>
+				<li><a href="">Log Out<a></li>
+			<% else %>
+				<li><a href="/users/new">Sign Up<a></li>
+				<li><a href="/sessions/new">Sign In<a></li>
+			<% end %>
 	</div>
 
 	<%= yield %>
