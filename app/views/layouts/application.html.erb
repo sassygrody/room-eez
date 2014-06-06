@@ -13,8 +13,7 @@
 		<ul>
 			<% if session[:user_id] %>
 				<li><%= link_to "Dashboard", user_path(session[:user_id]) %></li>
-				<li><a href="">Log Out<a>
-					<%= link_to "Log Out", user_logout_path, method: 'destroy' %>
+				<li><%= link_to "Log Out", user_logout_path, method: 'delete' %>
 				</li>
 			<% else %>
 				<li><a href="/users/new">Sign Up<a></li>

@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-
-
+  include UserHelper
 	def new
 		@user = User.new
 	end
@@ -13,7 +12,11 @@ class UsersController < ApplicationController
   end
 
   def show
-  	@user = User.find(params[:id])
+    if current_user
+    	
+    else
+      redirect_to root
+    end
   end
 
   private

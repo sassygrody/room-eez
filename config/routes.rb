@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  post '/logout' => 'sessions#destroy', :as => 'user_logout'
+  delete '/logout' => 'sessions#destroy', :as => 'user_logout'
   resources 'users'
   resources 'sessions'
   # The priority is based upon order of creation: first created -> highest priority.
