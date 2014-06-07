@@ -20,9 +20,12 @@ class UsersController < ApplicationController
 
     if current_user
       @user = User.find(params[:id])
-      @bills = @user.bills	
-      @chores = @user.chores
-      @events = @user.events
+      # @bills = @user.bills  
+      @bills = Bill.all	
+      # @chores = @user.chores
+      @chores = Chore.all
+      # @events = @user.events
+      @events = Event.all
     else current_user
       redirect_to root
     end

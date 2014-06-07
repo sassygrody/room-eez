@@ -1,31 +1,42 @@
 <h1><%= @user.first_name %>'s Profile Page</h2>
 
-<h2>Bills</h2>
-<ul>
-	<% @bills.each do |bill|%>
-	<li><%= link_to bill.title, "/bills/#{bill.id}" %><br>
-		<%=bill.description%><br>
-		<%=bill.cost_f%><br>
-	<%end%>
-	</li>
-</ul>
 
-<h2>Events</h2>
-<ul>
-	<% @events.each do |event|%>
-	<li><%= link_to event.name, "/events/#{event.id}" %><br>
-		<%=event.description%><br>
-		<%=event.happen_at%><br>
-	<%end%>
-	</li>
-</ul>
+<div class="all_things">
 
-<h2>Chores</h2>
-<ul>
-	<% @chores.each do |chore|%>
-	<li><%= link_to chore.name, "/chores/#{chore.id}" %><br>
-		<%=chore.description%><br>
-		<%=chore.happen_at%><br>
-	<%end%>
-	</li>
-</ul>
+	<div id="bills_nav">
+		<h2>Bills</h2>
+		<ul>
+			<% @bills.each do |bill|%>
+			<li><%= link_to bill.title, "/bills/#{bill.id}" %><br>
+				<%=bill.description%><br>
+				<%=bill.cost_f%><br>
+			<%end%>
+			</li>
+		</ul>
+	</div>
+
+	<div id= "events_nav">
+		<h2>Events</h2>
+		<ul>
+			<% @events.each do |event|%>
+			<li><%= link_to event.name, "/events/#{event.id}" %><br>
+				<%=event.description%><br>
+				<%=event.happen_at%><br>
+			<%end%>
+			</li>
+		</ul>
+	</div>
+
+	<div id= "chores_nav">
+		<h2>Chores</h2>
+		<ul>
+			<% @chores.each do |chore|%>
+			<li><%= link_to chore.name, "/chores/#{chore.id}" %><br>
+				<%=chore.description%><br>
+				<%=chore.happen_at%><br>
+			<%end%>
+			</li>
+		</ul>
+	</div>
+	
+</div>
