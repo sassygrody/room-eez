@@ -4,7 +4,7 @@ Date: <%=@event.happen_at%><br>
 
 <% if current_user.id == @event.creator_id %> 
 	<%= link_to "edit this event", edit_event_path(@event) %>
-	<%= link_to "delete this event", event_path(@event), method: "delete" %>
+	<%= link_to "delete this event", event_path(@event), method: :delete, data: { confirm: "Are you sure?" } %>
 
 <% elsif !@event.attendees.include?(current_user) %>
 	<%= link_to "Come to this event!", event_participation_path(@event), method: 'POST' %>
@@ -15,3 +15,14 @@ Date: <%=@event.happen_at%><br>
 <% end %>
 
 
+
+	<% if @event.attendees.nil? %>
+  	<h4> No one is going to this event! </h4>
+  <% else %>
+		<h4>People attending this event:</h4>
+		<% @event.attendees.each do |name| %>
+		<ul>
+			<li><%= name.first_name %></li>
+		</ul>
+	    <% end %>
+	<% end %>
