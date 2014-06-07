@@ -1,5 +1,17 @@
 <h2><%= @chore.name%></h2>
-<p>Description: <%= @chore.description %></p>
-<p>Date: <%= @chore.happen_at %></p><br>
+Description: <%=@chore.description%><br>
+Date: <%=@chore.happen_at%><br>
 
+<% if current_user.id == @chore.creator_id %>
+	<%= link_to "edit #{@chore.name}", edit_chore_path(@chore) %>
+	<%= link_to "Delete #{@chore.name}", chore_path(@chore), method: 'delete', class: 'delete' %>
+		<% unless current_user.participating_in_chore?(@chore.id)%>
+		<%= link_to "Sign Up For This Chore", chore_participation_path(@chore), method: 'post' %>
+		<% end %>
+<% elsif !current_user.participating_in_chore?(@chore.id)%>
+	<%= link_to "Sign Up For This Chore", chore_participation_path(@chore), method: 'post' %>
+
+	<% else %>
+	<h3>You are signed up for this chore!</h3>
+<% end %>
 

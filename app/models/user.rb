@@ -33,9 +33,7 @@ class User < ActiveRecord::Base
 		through: :bill_participations,
 		foreign_key: :debtor_id
 
-	has_many :comments, foreign_key: :author_id
-
-
+	has_many :comments, :foreign_key => :author_id
 
   has_secure_password
 
@@ -49,4 +47,13 @@ class User < ActiveRecord::Base
   def name
     "#{self.first_name} #{self.last_name}"
   end
+
+  def participating_in_chore?(chore_id)
+  	if self.chore_participations.pluck(:chore_id).include?(chore_id)
+  		return true
+  	else
+  		return false
+  	end
+  end
+ 
 end

@@ -5,14 +5,23 @@ Rails.application.routes.draw do
   
   get '/login' => 'sessions#new', :as => 'user_login'
   
-  post '/events/:id/participate' => 'events#participate', :as => 'event_participation'
 
 
   resources 'users'
+
   resources 'sessions'
+
   resources 'bills'
+  
+  post '/events/:id/participate' => 'events#participate', :as => 'event_participation'
+
   resources 'events'
+
+  post '/chores/:id/participate' => "chores#participate", :as => 'chore_participation'
+
   resources 'chores'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -34,7 +34,26 @@
 	border: solid 1px black;
 }
 
+/**** CHORE ****/
+ul{
+	list-style: none;
+}
 
+/*a{
+	text-decoration: none;
+	color: #5a5c66;
+}*/
+.new{
+	font-size: 2em;
+	font-weight: 900;
+}
+.creator a{	
+	color: #69915a;
+}
+
+.participating a{
+	color: #bd3e5a;
+}
 
 
 /*
