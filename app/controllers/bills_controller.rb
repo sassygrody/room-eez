@@ -26,6 +26,22 @@ class BillsController < ApplicationController
 		@user = current_user
 	end
 
+	def destroy
+		@bill = Bill.find(params[:id])
+		@bill.destroy
+
+		redirect_to "/users/#{current_user.id}"
+	end
+
+	def edit
+		@bill = Bill.find(params[:id])
+		if @bill.update(bill_params)
+			redirect_to(@bill)
+		else
+			render :edit
+		end
+	end
+
 	private
 	def bill_params
 		params.require(:bill).permit(:title, :description, :creator_id, :cost)
