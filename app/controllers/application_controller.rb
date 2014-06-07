@@ -4,10 +4,14 @@ class ApplicationController < ActionController::Base
   # @id = session[:id]
   @user = User.find_by_id(@id)
 
-  	def current_user
+
+  protect_from_forgery with: :exception
+
+
+# MOVED FROM HELPER
+  def current_user
 		@user ||= User.find_by_id(session[:user_id])
 	end
 
-  # protect_from_forgery with: :exception
-  protect_from_forgery with: :null_session
+
 end

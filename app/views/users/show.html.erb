@@ -4,6 +4,7 @@
 
 	<div id="bills_nav">
 		<h2>Bills</h2>
+
 		<h3><%= link_to "Create new bill", "/bills/new" %></h3><br>
 		<% @bills.each do |bill|%>
 		<tr>
@@ -14,10 +15,10 @@
 		    <td><%= link_to "Remove", bill, method: :delete, data: { confirm: "Are you sure?" } %></td>
 	  	</tr> <br><br>
 		<%end%>
-	</div>
 
 	<div id= "events_nav">
 		<h2>Events</h2>
+		<h4><%= link_to "Create a new event!", new_event_path %></h4>
 		<ul>
 			<% @events.each do |event|%>
 			<li><%= link_to event.name, "/events/#{event.id}" %><br>
@@ -30,6 +31,13 @@
 
 	<div id= "chores_nav">
 		<h2>Chores</h2>
+		<h4><%= link_to "Create a new chore!", new_chore_path %></h4>
+	
+		<ul>
+			<%= current_user.chores.name %> 
+		</ul>
+
+
 		<ul>
 			<% @chores.each do |chore|%>
 			<li><%= link_to chore.name, "/chores/#{chore.id}" %><br>
