@@ -33,6 +33,9 @@ class User < ActiveRecord::Base
 		through: :bill_participations,
 		foreign_key: :debtor_id
 
+	has_many :comments, foreign_key: :author_id
+
+
 
   has_secure_password
 
