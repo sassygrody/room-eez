@@ -25,7 +25,7 @@ end
 	bill_participation = BillParticipation.create!(
 		user_id: User.all.sample.id,
 		bill_id: bill.id,
-		iou: rand()
+		iou: nil
 	)
 
 	chore = Chore.create!(

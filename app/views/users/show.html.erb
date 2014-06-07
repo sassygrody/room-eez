@@ -1,11 +1,12 @@
 <h1><%= @user.first_name %>'s Profile Page</h2>
 
 <h2>Bills</h2>
-<ul>
+<ul> 
 	<% @bills.each do |bill|%>
 	<li><%= link_to bill.title, "/bills/#{bill.id}" %><br>
 		<%=bill.description%><br>
 		<%=bill.cost_f%><br>
+		<%=bill.get_iou(@user.id)%>
 	<%end%>
 	</li>
 </ul>
