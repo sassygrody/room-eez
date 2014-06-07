@@ -15,3 +15,15 @@ Date: <%=@chore.happen_at%><br>
 	<h3>You are signed up for this chore!</h3>
 <% end %>
 
+
+
+	<% if @chore.chore_doers.nil? %>
+  	<h4> No one is signed up to do this chore! </h4>
+  <% else %>
+		<h4>People already doing this chore:</h4>
+		<% @chore.chore_doers.each do |name| %>
+		<ul>
+			<li><%= name.first_name %></li>
+	    <% end %>
+	<% end %>
+</ul>
