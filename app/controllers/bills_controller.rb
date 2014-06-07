@@ -1,5 +1,5 @@
 class BillsController < ApplicationController
-
+	# include ApplicationHelper
 	def show
 		@bill = Bill.find(params[:id])
 	end

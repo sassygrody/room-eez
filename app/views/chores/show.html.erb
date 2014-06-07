@@ -1,29 +1,38 @@
+<div>
+
 <h2><%= @chore.name%></h2>
 Description: <%=@chore.description%><br>
 Date: <%=@chore.happen_at%><br>
 
 <% if current_user.id == @chore.creator_id %>
-	<%= link_to "edit #{@chore.name}", edit_chore_path(@chore) %>
-	<%= link_to "Delete #{@chore.name}", chore_path(@chore), method: 'delete', class: 'delete' %>
+	<%= link_to "Edit This Chore", edit_chore_path(@chore), class: 'button' %>
+	<%= link_to "Delete This Chore", chore_path(@chore), method: 'delete', class: 'delete' %>
 		<% unless current_user.participating_in_chore?(@chore.id)%>
 		<%= link_to "Sign Up For This Chore", chore_participation_path(@chore), method: 'post' %>
 		<% end %>
+<% elsif current_user.participating_in_chore?(@chore.id)%>
+	<%= link_to "Completed", chore_path(@chore), method: 'delete' %>
 <% elsif !current_user.participating_in_chore?(@chore.id)%>
 	<%= link_to "Sign Up For This Chore", chore_participation_path(@chore), method: 'post' %>
-
-	<% else %>
-	<h3>You are signed up for this chore!</h3>
 <% end %>
 
+</div>
 
-
-	<% if @chore.chore_doers.nil? %>
-  	<h4> No one is signed up to do this chore! </h4>
-  <% else %>
-		<h4>People already doing this chore:</h4>
-		<% @chore.chore_doers.each do |name| %>
-		<ul>
-			<li><%= name.first_name %></li>
-		</ul>
-	    <% end %>
-	<% end %>
+<div>
+	<h2>Comments</h2>
+	<%= link_to "+", new_chore_comment_path(@chore) %>
+	<div id="comment-list">
+		<% if !@comments.empty? %>
+			<ul>
+			<% @comments.each do |c| %>
+				<div class="comment">
+					<p><%= c.content %></p>
+					<%= c.author.name %>
+				</div>
+			<% end %>
+			</ul>
+		<% else %>
+			<p> No comments yet! </p>
+		<% end %>
+	</div>
+</div>

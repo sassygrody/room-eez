@@ -1,24 +1,49 @@
-
 /****  Nav Bar *****/
 .nav {
-	background-color: #4F595B;
+	background-color: #568ca3;
 	color: white;
-	padding-left:20px;
+	margin: 0;
+	padding: 40px;
+	border: 2px solid black;
 }
 
-.nav ul {
-	list-style: none;
-	margin: -15px 0 0 -50px;
+header h1{
+	margin-left:20px;
+	display: inline;
 }
-.nav ul li {
-	display: inline-block;
+
+header ul {
+	float: right;
+	list-style: none;
+	border: 2px solid black;
+	padding: 0;
+	margin: 0;
+}
+header ul li {
+	/*display: inline-block;*/
 	padding: 0 10px 5px;
 }
-.nav ul a {
+header a {
 	text-decoration: none;
-	color: white;
+	/*color: white;*/
 }
 
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: #5a5c66;
+}
+.new{
+	font-size: 2em;
+	font-weight: 900;
+}
+
+.creator a{	
+	color: #69915a;
+}
 
 /***** Dashboard column display ******/
 .all_things {
@@ -34,6 +59,9 @@
 	border: solid 1px black;
 }
 
+.participating a{
+	color: #bd3e5a;
+}
 /**** CHORE ****/
 ul{
 	list-style: none;
@@ -54,7 +82,6 @@ ul{
 .participating a{
 	color: #bd3e5a;
 }
-
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

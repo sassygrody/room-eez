@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
-  include UserHelper
+  # include ApplicationHelper
 	def new
     @errors = params[:errors]
 		@user = User.new
 	end
 
-	def create
+  def create
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
     if current_user
       @user = User.find(params[:id])
+
       # @bills = @user.bills  
       @bills = Bill.all	
       # @chores = @user.chores
