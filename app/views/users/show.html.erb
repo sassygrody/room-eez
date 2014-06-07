@@ -5,6 +5,7 @@
 
 	<div id="bills_nav">
 		<h2>Bills</h2>
+		<h4><%= link_to "Create a new bill!", new_bill_path %></h4>
 		<ul>
 			<% @bills.each do |bill|%>
 			<li><%= link_to bill.title, "/bills/#{bill.id}" %><br>
@@ -17,6 +18,7 @@
 
 	<div id= "events_nav">
 		<h2>Events</h2>
+		<h4><%= link_to "Create a new event!", new_event_path %></h4>
 		<ul>
 			<% @events.each do |event|%>
 			<li><%= link_to event.name, "/events/#{event.id}" %><br>
@@ -29,6 +31,15 @@
 
 	<div id= "chores_nav">
 		<h2>Chores</h2>
+		<h4><%= link_to "Create a new chore!", new_chore_path %></h4>
+		<h6>Chores you signed up for: </h6>
+			<%= current_user.chore_participations.name %>
+
+		<ul>
+			<%= current_user.chores.name %> 
+		</ul>
+
+
 		<ul>
 			<% @chores.each do |chore|%>
 			<li><%= link_to chore.name, "/chores/#{chore.id}" %><br>
