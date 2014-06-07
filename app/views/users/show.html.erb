@@ -21,9 +21,17 @@
 </ul>
 
 <h2>Chores</h2>
+<%= link_to "+", new_chore_path, class:"new"%>
 <ul>
 	<% @chores.each do |chore|%>
-	<li><%= link_to chore.name, "/chores/#{chore.id}" %><br>
+	<% if current_user.id == chore.creator_id %>
+		<li class= "creator"><%= link_to chore.name, "/chores/#{chore.id}" %><br>
+	<% elsif current_user.participating_in_chore?(chore.id) %>
+		<li class="participating"><%= link_to chore.name, "/chores/#{chore.id}" %><br>
+	<% else %>
+		<li><%= link_to chore.name, "/chores/#{chore.id}"%><br>
+		
+	<% end %>
 		<%=chore.description%><br>
 		<%=chore.happen_at%><br>
 	<%end%>

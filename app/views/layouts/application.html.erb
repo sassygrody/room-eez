@@ -9,7 +9,7 @@
 <body>
 	
 	<div class="nav">
-		<h1>Room-eez</h1>
+		<h1><%= link_to "Room-Eez", root_path %></h1>
 		<ul>
 			<% if session[:user_id] %>
 				<li><%= link_to "Dashboard", user_path(session[:user_id]) %></li>

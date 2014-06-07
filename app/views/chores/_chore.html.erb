@@ -1,0 +1,9 @@
+<%= form_for(@chore) do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :happen_at %>
+	<%= f.date_field :happen_at %>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+	<%= f.submit "Submit Chore" %>
+<% end %>
