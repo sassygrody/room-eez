@@ -14,7 +14,6 @@ class ChoresController < ApplicationController
 	end
 
 	def edit
-		# current_user
 		@chore = Chore.find_by_id(params[:id])
 	end
 
@@ -33,7 +32,6 @@ class ChoresController < ApplicationController
 	end
 
 	def participate
-		# current_use	r
 		@chore = Chore.find_by_id(params[:id])
 		current_user.chores << @chore
 

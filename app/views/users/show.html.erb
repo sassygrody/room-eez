@@ -32,9 +32,7 @@
 	<div id= "chores_nav">
 		<h2>Chores</h2>
 		<h4><%= link_to "Create a new chore!", new_chore_path %></h4>
-		<h6>Chores you signed up for: </h6>
-			<%= current_user.chore_participations.name %>
-
+	
 		<ul>
 			<%= current_user.chores.name %> 
 		</ul>
