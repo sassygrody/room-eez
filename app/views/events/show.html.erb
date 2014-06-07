@@ -15,3 +15,14 @@ Date: <%=@event.happen_at%><br>
 <% end %>
 
 
+
+	<% if @event.attendees.nil? %>
+  	<h4> No one is going to this event! </h4>
+  <% else %>
+		<h4>People attending this event:</h4>
+		<% @event.attendees.each do |name| %>
+		<ul>
+			<li><%= name.first_name %></li>
+		</ul>
+	    <% end %>
+	<% end %>
