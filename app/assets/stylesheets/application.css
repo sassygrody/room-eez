@@ -1,20 +1,30 @@
-.nav {
-	background-color: #4F595B;
+header {
+	background-color: #568ca3;
 	color: white;
-	padding-left:20px;
+	margin: 0;
+	padding: 40px;
+	border: 2px solid black;
 }
 
-.nav ul {
-	list-style: none;
-	margin: -15px 0 0 -50px;
+header h1{
+	margin-left:20px;
+	display: inline;
 }
-.nav ul li {
-	display: inline-block;
+
+header ul {
+	float: right;
+	list-style: none;
+	border: 2px solid black;
+	padding: 0;
+	margin: 0;
+}
+header ul li {
+	/*display: inline-block;*/
 	padding: 0 10px 5px;
 }
-.nav a {
+header a {
 	text-decoration: none;
-	color: white;
+	/*color: white;*/
 }
 
 ul{

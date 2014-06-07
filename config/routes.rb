@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   post '/chores/:id/participate' => "chores#participate", :as => 'chore_participation'
   
-  resources 'chores'
+  resources 'chores' do
+    resources 'comments'
+  end
   
 end

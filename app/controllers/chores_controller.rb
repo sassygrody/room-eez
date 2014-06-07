@@ -2,6 +2,7 @@ class ChoresController < ApplicationController
 	include ApplicationHelper
 	def show
 		@chore = Chore.find_by_id(params[:id])
+		@comments = @chore.comments
 	end
 
 	def new

@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       @bills = Bill.all
       @chores = Chore.all
       @events = Event.all
-    else current_user
+    else 
       redirect_to root
     end
   end
