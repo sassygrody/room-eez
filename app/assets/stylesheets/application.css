@@ -47,16 +47,23 @@ a{
 
 /***** Dashboard column display ******/
 .all_things {
-	border: solid 1px black;
+	/*border: solid 1px black;*/
+	width: 95%;
 
 }
 
 .all_things div {
-	display: inline-block;
-	width: 30%;
-	height: 100%;
+	/*display: inline-block;*/
+	width: 28%;
+	height: 300px;
 	top: 1px;
 	border: solid 1px black;
+	vertical-align:super;
+	float: right;
+	margin-left: 33px;
+	margin-bottom: 33px;
+	padding: 10px;
+	overflow:scroll;
 }
 
 .participating a{
@@ -81,6 +88,11 @@ ul{
 
 .participating a{
 	color: #bd3e5a;
+}
+
+
+
+
 }
 
 /*
