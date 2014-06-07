@@ -1,8 +1,8 @@
 <form accept-charset="UTF-8" action="/bills" method="post">
-  <input type="text" name="bill[title]" placeholder="Title" />
-  <input type="text" name="bill[description]" placeholder="Description" />
-  <input type="text" name="bill[cost]" placeholder="Cost" />
-  <input type="text" name="bill_participation[emails]" placeholder="Bill sharers" />
-  <input type="hidden" name="bill[creator_id]" value=<%=@user.id%> />
+  <input type="text" name="bill[title]" placeholder="Title" /><br>
+  <input type="text" name="bill[description]" placeholder="Description" /><br>
+  <input type="text" name="bill[cost]" placeholder="Cost" /><br>
+  <input type="text" name="bill_participation[emails]" placeholder="Bill sharers" /><br>
+  <input type="hidden" name="bill[creator_id]" value=<%=@user.id%> /><br>
   <input type="submit" value="Submit" />
 </form>
