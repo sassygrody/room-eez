@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   @user = User.find_by_id(@id)
 
 
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :null_session
 
 
 # MOVED FROM HELPER
