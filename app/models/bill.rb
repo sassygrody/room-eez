@@ -17,4 +17,20 @@ class Bill < ActiveRecord::Base
 		"$#{self.cost.to_f.round(2)}"
 	end
 
+	def set_iou(user_id)
+		user_bill = get_bill_participation(user_id)
+		debtors = self.bill_participations.length
+		user_bill.iou = self.cost / debtors
+		user_bill.save!
+	end
+
+	def get_bill_participation(user_id)
+		BillParticipation.where(bill_id: self.id, user_id: user_id)
+	end
+
+	def get_iou(user_id)
+		bill = get_bill_participation(user_id)
+		puts bill.first.iou
+		bill.first.iou
+	end
 end
