@@ -20,8 +20,9 @@ Date: <%=@chore.happen_at%><br>
 
 <div>
 	<h2>Comments</h2>
+	<%= link_to "+", new_chore_comment_path(@chore) %>
 	<div id="comment-list">
-		<% if @comments %>
+		<% if !@comments.empty? %>
 			<ul>
 			<% @comments.each do |c| %>
 				<div class="comment">
@@ -31,7 +32,7 @@ Date: <%=@chore.happen_at%><br>
 			<% end %>
 			</ul>
 		<% else %>
-			
+			<p> No comments yet! </p>
 		<% end %>
 	</div>
 </div>

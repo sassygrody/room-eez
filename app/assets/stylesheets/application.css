@@ -1,4 +1,5 @@
-header {
+/****  Nav Bar *****/
+.nav {
 	background-color: #568ca3;
 	color: white;
 	margin: 0;
@@ -39,6 +40,41 @@ a{
 	font-size: 2em;
 	font-weight: 900;
 }
+
+.creator a{	
+	color: #69915a;
+}
+
+/***** Dashboard column display ******/
+.all_things {
+	border: solid 1px black;
+
+}
+
+.all_things div {
+	display: inline-block;
+	width: 30%;
+	height: 100%;
+	top: 1px;
+	border: solid 1px black;
+}
+
+.participating a{
+	color: #bd3e5a;
+}
+/**** CHORE ****/
+ul{
+	list-style: none;
+}
+
+/*a{
+	text-decoration: none;
+	color: #5a5c66;
+}*/
+.new{
+	font-size: 2em;
+	font-weight: 900;
+}
 .creator a{	
 	color: #69915a;
 }
@@ -46,6 +82,7 @@ a{
 .participating a{
 	color: #bd3e5a;
 }
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -61,3 +98,5 @@ a{
  *= require_tree .
  *= require_self
  */
+
+ 

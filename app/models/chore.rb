@@ -9,7 +9,7 @@ class Chore < ActiveRecord::Base
 		through: :chore_participations,
 		source: :user
 	has_many :comments, as: :commentable
-	
+
 	validates_presence_of :name, :happen_at
 
 end

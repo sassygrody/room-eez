@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  include ApplicationHelper
+  # include ApplicationHelper
 	def new
     @errors = params[:errors]
 		@user = User.new
@@ -20,10 +20,14 @@ class UsersController < ApplicationController
 
     if current_user
       @user = User.find(params[:id])
-      @bills = Bill.all
+
+      # @bills = @user.bills  
+      @bills = Bill.all	
+      # @chores = @user.chores
       @chores = Chore.all
+      # @events = @user.events
       @events = Event.all
-    else 
+    else current_user
       redirect_to root
     end
   end
