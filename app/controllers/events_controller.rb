@@ -8,10 +8,15 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		new_event = current_user.created_events.create(params_event)
-		new_event.attendees << current_user
-		
-		redirect_to current_user
+		@event = current_user.created_events.create(params_event)
+		@event.attendees << current_user
+
+		respond_to do |format|
+			format.html {redirect_to current_user}
+			format.js {}
+			# format.json { render json: @event, status: :created, location: @event}
+		end
+		# redirect_to current_user
 	end
 
 	def participate
