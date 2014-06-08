@@ -17,19 +17,23 @@
 	</div>
 
 	<div id= "events_nav">
+
 		<h2>Events</h2>
 		<span class="plus"><%= link_to "+", new_event_path, class:"new"%></span>
-	
+
+		<div id="render_new"><%= render "events/new" %></div>
+
 		<% @events.each do |event|%>
 			<tr>
 			    <td><%= event.name %></td>
 			    <td><%= event.description %></td>
 			    <td><%= link_to "Show", event %></td>
 			    <td><%= link_to "Edit", edit_event_path(event) %></td>
+
 			    <td><%= link_to "Remove", event, method: :delete, data: { confirm: "Are you sure?" } %></td>
 	  		</tr> <br><br>
 	  	<%end%>
-			
+
 	</div>
 
 	<div id= "chores_nav">
@@ -43,7 +47,7 @@
 					<li class="participating"><%= link_to chore.name, "/chores/#{chore.id}" %><br>
 				<% else %>
 					<li><%= link_to chore.name, "/chores/#{chore.id}"%><br>
-					
+
 				<% end %>
 					<%=chore.description%><br>
 					<%=chore.happen_at%><br>
@@ -51,5 +55,5 @@
 				<%end%>
 			</ul>
 	</div>
-	
+
 </div>

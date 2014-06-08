@@ -41,7 +41,7 @@ a{
 	font-weight: 900;
 }
 
-.creator a{	
+.creator a{
 	color: #69915a;
 }
 
@@ -87,7 +87,7 @@ ul{
 	font-weight: 900;
 }
 
-.creator a{	
+.creator a{
 	color: #69915a;
 }
 
@@ -101,6 +101,15 @@ ul{
     right: 10px;
 }
 
+#render_new {
+	height: 30%;
+	width: 90%;
+	margin-left: 0;
+	margin-bottom: 10px;
+	padding: 20px;
+	float: left;
+
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -117,4 +126,4 @@ ul{
  *= require_self
  */
 
- 
+

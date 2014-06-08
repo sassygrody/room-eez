@@ -20,13 +20,10 @@ class UsersController < ApplicationController
 
     if current_user
       @user = User.find(params[:id])
-
-      # @bills = @user.bills  
-      @bills = Bill.all	
-      # @chores = @user.chores
-      @chores = Chore.all
-      # @events = @user.events
-      @events = Event.all
+      @bills = Bill.all.order('created_at DESC')
+      @chores = Chore.all.order('created_at DESC')
+      @events = Event.all.order('created_at DESC')
+      @event = Event.new
     else current_user
       redirect_to root
     end
@@ -40,5 +37,5 @@ class UsersController < ApplicationController
       	:password,
       	:phone_number)
     end
-	
+
 end
