@@ -1,3 +1,13 @@
+$(document).ready(function() {
+
+	$('#events_nav').on('click', function(event){
+		event.preventDefault();
+ 
+	}); // close event click 
+
+}); // close doc
+
+
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
